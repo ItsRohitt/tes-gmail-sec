@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS security_awareness
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE security_awareness;
+
+CREATE TABLE IF NOT EXISTS visits (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  consented_at DATETIME NOT NULL,
+  browser VARCHAR(40) NOT NULL,
+  device VARCHAR(40) NOT NULL
+);
